@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.4",
+    "node": "^22.7.0",
+    "nodeman": "^1.1.2"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Hostal Management System",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+   "start": "node server.js",
+    "dev": "nodemon serve.js"
+  },
+  "author": "Uchith",
+  "license": "ISC"
+}
