@@ -6,6 +6,7 @@ import BreakfirstMenu from './FoodOrdering/BreakfirstMenu';
 import DinnerMenu from './FoodOrdering/DinnerMenu';
 import Checkouts from './FoodOrdering/Checkouts';
 import SelectedFoods from './FoodOrdering/SelectedFoods';
+import LunchMenu from './FoodOrdering/LunchMenu';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Route path="/dinnermenu" element={<DinnerMenu/>}/>
         <Route path="/checkouts" element={<Checkouts/>}/>
         <Route path="/selectedfoods" element={<SelectedFoods/>}/>
+        <Route path="/lunchmenu" element={<LunchMenu/>}/>
+
 
 
 

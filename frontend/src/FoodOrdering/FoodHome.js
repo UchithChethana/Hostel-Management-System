@@ -2,7 +2,10 @@ import React from 'react';
 
 const FoodHome = () => {
   return (
-    <div className="min-h-screen bg-white p-6">
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat p-6"
+      style={{ backgroundImage: "url('')" }}
+    >
       {/* Header Section */}
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center">
@@ -44,16 +47,16 @@ const FoodHome = () => {
 
       {/* Food Categories */}
       <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto">
-        <a href='breakfirstmenu'><button className="bg-blue-200 w-96 -ml-80 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        <a href='breakfirstmenu'><button className="bg-blue-200 w-96 -ml-64 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">BREAKFAST</span>
         </button></a>
-        <button className="bg-white border-2 border-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        <a href='beveragemenu'><button className="bg-white w-96  border-2 border-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">BEVERAGES</span>
-        </button>
-        <button className="bg-orange-400 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        </button></a>
+        <a href='lunchmenu'><button className="bg-orange-400 flex items-center justify-center py-20  -ml-64 w-96 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold text-white">LUNCH</span>
-        </button>
-        <a href='dinnermenu'><button className="bg-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        </button></a>
+        <a href='dinnermenu'><button className="bg-gray-200 flex items-center justify-center py-20  w-96 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">DINNER</span>
         </button></a>
       </div>
