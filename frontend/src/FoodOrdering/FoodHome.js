@@ -44,18 +44,18 @@ const FoodHome = () => {
 
       {/* Food Categories */}
       <div className="grid grid-cols-2 gap-6 max-w-xl mx-auto">
-        <button className="bg-blue-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        <a href='breakfirstmenu'><button className="bg-blue-200 w-96 -ml-80 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">BREAKFAST</span>
-        </button>
+        </button></a>
         <button className="bg-white border-2 border-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">BEVERAGES</span>
         </button>
         <button className="bg-orange-400 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold text-white">LUNCH</span>
         </button>
-        <button className="bg-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
+        <a href='dinnermenu'><button className="bg-gray-200 flex items-center justify-center py-20 rounded-md shadow-md hover:shadow-lg">
           <span className="text-2xl font-bold">DINNER</span>
-        </button>
+        </button></a>
       </div>
     </div>
   );
