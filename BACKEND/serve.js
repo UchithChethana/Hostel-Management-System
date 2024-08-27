@@ -30,6 +30,10 @@ connection.once("open",() =>{   //open the connection
     console.log("MongoDb connection is sucess !");
 })
 
+const MaintenanceRouter = require("./routes/maintenances.js");
+
+app.use("/maintaince",MaintenanceRouter);
+
 //port eka run kara ganimata
 
 app.listen(PORT, () => {
