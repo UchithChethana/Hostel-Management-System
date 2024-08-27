@@ -6,9 +6,9 @@ const BreakfirstMenu = () => {
       className="min-h-screen bg-cover bg-center bg-no-repeat p-4"
       style={{ backgroundImage: "url('https://th.bing.com/th/id/R.c09cc81e4e1dbd86b9b01001ae8e719f?rik=iPTv8bpRV7ZD1Q&pid=ImgRaw&r=0')" }}
     >
-      <div className="max-w-5xl mx-auto bg-slate-950 bg-opacity-90 rounded-lg shadow-md p-6">
+      <div className="max-w-5xl mx-auto mt-20 mb-20 bg-slate-950 bg-opacity-90 rounded-lg shadow-md p-6  ">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl text-white font-bold">BREAKFAST</h1>
+          <h1 className="text-4xl text-white ml-96 font-bold">BREAKFAST</h1>
         </div>
 
         {/* Menu Items */}
@@ -119,7 +119,8 @@ const BreakfirstMenu = () => {
 
         {/* Add to Cart Button */}
         <div className="flex justify-center mt-6">
-          <a href='selectedfoods'><button className="bg-green-500 text-black py-2 px-6 rounded-lg font-bold">Add to checkouts</button></a>
+          <div className='w-96'></div>
+          <a href='selectedfoods'><button className="bg-green-500 ml-96 w-44 text-black py-2 px-6 rounded-lg font-bold">Select</button></a>
         </div>
       </div>
     </div>
