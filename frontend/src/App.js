@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
-import FoodHome from './FoodOrdering/FoodHome';
+
+import Layout from './Components/FoodLayout';
+
+import FoodHome from './Components/FoodOrdering/FoodHome';
 import{BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import BreakfirstMenu from './FoodOrdering/BreakfirstMenu';
-import DinnerMenu from './FoodOrdering/DinnerMenu';
-import Checkouts from './FoodOrdering/Checkouts';
-import SelectedFoods from './FoodOrdering/SelectedFoods';
-import LunchMenu from './FoodOrdering/LunchMenu';
-import BeverageMenu from './FoodOrdering/BeverageMenu';
+import BreakfirstMenu from './Components/FoodOrdering/BreakfirstMenu';
+import DinnerMenu from './Components/FoodOrdering/DinnerMenu';
+import Pickup from './Components/FoodOrdering/Pickup';
+import SelectedFoods from './Components/FoodOrdering/SelectedFoods';
+import LunchMenu from './Components/FoodOrdering/LunchMenu';
+import BeverageMenu from './Components/FoodOrdering/BeverageMenu';
 
 
 
@@ -16,14 +19,15 @@ function App() {
     <Router>
       <Routes>
 
-        <Route path="/foodhome" element={<FoodHome/>}/>
-        <Route path="/breakfirstmenu" element={<BreakfirstMenu/>}/>
-        <Route path="/dinnermenu" element={<DinnerMenu/>}/>
-        <Route path="/checkouts" element={<Checkouts/>}/>
-        <Route path="/selectedfoods" element={<SelectedFoods/>}/>
-        <Route path="/lunchmenu" element={<LunchMenu/>}/>
-        <Route path="/beveragemenu" element={<BeverageMenu/>}/>
-
+        <Route path="/" element={<Layout/>}>
+          <Route path="/foodhome" element={<FoodHome/>}/>
+          <Route path="/breakfirstmenu" element={<BreakfirstMenu/>}/>
+          <Route path="/dinnermenu" element={<DinnerMenu/>}/>
+          <Route path="/pickup" element={<Pickup/>}/>
+          <Route path="/selectedfoods" element={<SelectedFoods/>}/>
+          <Route path="/lunchmenu" element={<LunchMenu/>}/>
+          <Route path="/beveragemenu" element={<BeverageMenu/>}/>
+        </Route>
 
 
 

@@ -15,7 +15,7 @@ const FoodHome = () => {
 
         {/* Main Content */}
         <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold">Hello himaya!</h2>
+          <h2 className="text-2xl mt-20 font-bold">Hello himaya!</h2>
           <p className="text-2xl font-semibold">What do you want to eat.......</p>
         </div>
 

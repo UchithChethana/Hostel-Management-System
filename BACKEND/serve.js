@@ -30,6 +30,9 @@ connection.once("open",() =>{   //open the connection
     console.log("MongoDb connection is sucess !");
 })
 
+const StaffRouter = require("./route/staffs.js")
+
+app.use("/stafff",StaffRouter);
 //port eka run kara ganimata
 
 app.listen(PORT, () => {
