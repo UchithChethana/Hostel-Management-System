@@ -1,0 +1,92 @@
+/* Navbar container */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+.navbar {
+    background-color: #224383;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    width: 97%;
+    z-index: 1000;
+    font-family: "Alegreya Sans SC", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* Logo styling */
+.navbar .logo img {
+    border-radius: 70%;
+    height: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logoName {
+    position: fixed;
+    padding-left: 100px;
+}
+
+b {
+    color: #f91;
+    font-size: 40px;
+}
+
+.white_logo {
+    color: #ffffff;
+    font-size: 35px;
+}
+
+/* Hover effect on logo */
+.navbar .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Nav links container */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between the links */
+    margin: 0;
+    padding: 0;
+}
+
+/* Individual link styling */
+.navbar .nav-links li {
+    display: inline; /* Ensures horizontal alignment */
+}
+
+.navbar .nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect on links */
+.navbar .nav-links a:hover {
+    color: #f91;
+    text-decoration: underline;
+}
+
+/* Add padding to the top of the content to ensure it doesn't hide behind the navbar */
+body {
+    padding-top: 70px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    body {
+        padding-top: 60px;
+    }
+}
