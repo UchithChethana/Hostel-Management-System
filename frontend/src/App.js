@@ -7,6 +7,8 @@ import DinnerMenu from './FoodOrdering/DinnerMenu';
 import Checkouts from './FoodOrdering/Checkouts';
 import SelectedFoods from './FoodOrdering/SelectedFoods';
 import LunchMenu from './FoodOrdering/LunchMenu';
+import BeverageMenu from './FoodOrdering/BeverageMenu';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
         <Route path="/checkouts" element={<Checkouts/>}/>
         <Route path="/selectedfoods" element={<SelectedFoods/>}/>
         <Route path="/lunchmenu" element={<LunchMenu/>}/>
+        <Route path="/beveragemenu" element={<BeverageMenu/>}/>
 
 
 

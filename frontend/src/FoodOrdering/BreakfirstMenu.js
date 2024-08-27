@@ -119,7 +119,7 @@ const BreakfirstMenu = () => {
 
         {/* Add to Cart Button */}
         <div className="flex justify-center mt-6">
-          <button className="bg-green-500 text-black py-2 px-6 rounded-lg font-bold">Add to checkouts</button>
+          <a href='selectedfoods'><button className="bg-green-500 text-black py-2 px-6 rounded-lg font-bold">Add to checkouts</button></a>
         </div>
       </div>
     </div>
