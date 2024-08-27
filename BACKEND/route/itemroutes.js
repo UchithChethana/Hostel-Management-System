@@ -2,6 +2,7 @@ const express=require("express")
 
 
 const itemmodel = require("../models/itemmodel");
+const { route } = require("./managerroutes");
 
 const router = express.Router();
 
@@ -72,50 +73,47 @@ router.get("/item_order/:id", async (req, res) => {
  
 module.exports = router;
 
-<<<<<<< Updated upstream
-/*const router = require("express").Router();
-const Products = require("../models/itemmodel");
+// /*const router = require("express").Router();
+// const Products = require("../models/itemmodel");
 
-router.route("/add").post((req,res) => {
-    const{
-        productname,
-        description,
-        price,
-        dis,
-        sku,
-        quentity,
-        photo,
-        p_catogry,
-        p_tags
-    } = req.body;
+// router.route("/add").post((req,res) => {
+//     const{
+//         productname,
+//         description,
+//         price,
+//         dis,
+//         sku,
+//         quentity,
+//         photo,
+//         p_catogry,
+//         p_tags
+//     } = req.body;
 
-    const newProduct = new Products({
-        productname,
-        description,
-        price,
-        dis,
-        sku,
-        quentity,
-        photo,
-        p_catogry,
-        p_tags
-    });
+//     const newProduct = new Products({
+//         productname,
+//         description,
+//         price,
+//         dis,
+//         sku,
+//         quentity,
+//         photo,
+//         p_catogry,
+//         p_tags
+//     });
 
-    newProduct.save()
-        .then(() => res.json("Product added"))
-        .catch((err) => res.status(400).json("Error:"+err));
-});
+//     newProduct.save()
+//         .then(() => res.json("Product added"))
+//         .catch((err) => res.status(400).json("Error:"+err));
+// });
 
 
-//Get all products
-router.route("/").get((req,res) =>{
-    Products.find()
-        .then((Product) => res.json("Product"))
-        .catch((err) => res.status(400).json("Error:"+err));
-});
+// //Get all products
+// router.route("/").get((req,res) =>{
+//     Products.find()
+//         .then((Product) => res.json("Product"))
+//         .catch((err) => res.status(400).json("Error:"+err));
+// });
 
-//Up
-module.exports = router;*/
+// //Up
+// module.exports = router;*/
 
-=======
->>>>>>> Stashed changes

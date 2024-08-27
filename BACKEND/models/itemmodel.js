@@ -17,7 +17,7 @@ const itemchema=mongoose.Schema({
 })
 
 const itemmodel=mongoose.model("Products",itemchema)
-<<<<<<< Updated upstream
+
 module.exports = itemmodel;
 
 /*const mongoose=require("mongoose");
@@ -63,6 +63,5 @@ const ItemSchema = new mongoose.Schema({
 //Create the model using the schema
 const itemmodel=mongoose.model("Products",itemchema)
 module.exports = itemmodel;*/
-=======
+
 module.exports = itemmodel;
->>>>>>> Stashed changes

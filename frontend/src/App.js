@@ -1,38 +1,29 @@
-
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Ensure this is uncommented
 
-import Layout from './Components/FoodLayout';
-
-import FoodHome from './Components/FoodOrdering/FoodHome';
-import{BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import BreakfirstMenu from './Components/FoodOrdering/BreakfirstMenu';
-import DinnerMenu from './Components/FoodOrdering/DinnerMenu';
-import Pickup from './Components/FoodOrdering/Pickup';
-import SelectedFoods from './Components/FoodOrdering/SelectedFoods';
-import LunchMenu from './Components/FoodOrdering/LunchMenu';
-import BeverageMenu from './Components/FoodOrdering/BeverageMenu';
-
-
+import Header from './ItemComponent/header';
+import ItemDetails from './ItemComponent/Itemdetails';
+import ItemRepoart from './ItemComponent/ItemRepoart';
+import UpdateItem from './ItemComponent/UpdateItem';
+import ManagerSignUp from './ManagerComponent/ManagerSignUp';
+import ManagerSignin from './ManagerComponent/ManagerSignin';
+import Product from './ItemComponent/product';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-
-        <Route path="/" element={<Layout/>}>
-          <Route path="/foodhome" element={<FoodHome/>}/>
-          <Route path="/breakfirstmenu" element={<BreakfirstMenu/>}/>
-          <Route path="/dinnermenu" element={<DinnerMenu/>}/>
-          <Route path="/pickup" element={<Pickup/>}/>
-          <Route path="/selectedfoods" element={<SelectedFoods/>}/>
-          <Route path="/lunchmenu" element={<LunchMenu/>}/>
-          <Route path="/beveragemenu" element={<BeverageMenu/>}/>
-        </Route>
-
-
-
-      </Routes>
-    </Router>
+    <div className="App">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<ManagerSignin />} />
+          <Route path="/add-manager" element={<ManagerSignUp />} />
+          <Route path="/add-item" element={<Product />} />
+          <Route path="/itemdetails" element={<ItemDetails />} />
+          <Route path="/itemupdate/:id" element={<UpdateItem />} />
+          <Route path="/itemrepoart" element={<ItemRepoart />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
