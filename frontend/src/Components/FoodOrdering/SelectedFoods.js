@@ -48,7 +48,7 @@ const SelectedFoods = () => {
       ></div>
 
       {/* Content */}
-      <div className="bg-white bg-opacity-70 rounded-lg shadow-lg p-6 w-full max-w-2xl">
+      <div className="bg-white bg-opacity-70 mt-16 mb-20 rounded-lg shadow-lg p-6 w-full max-w-2xl">
         {/* Header */}
         <h1 className="text-3xl font-bold mb-6 text-center">SELECTED FOODS</h1>
 
@@ -74,8 +74,8 @@ const SelectedFoods = () => {
 
         {/* Total and Checkout */}
         <div className="flex justify-between mt-6">
-          <button className="bg-green-500 text-white font-bold py-2 px-6 rounded-lg">Total Rs.{total}.00</button>
-          <button className="bg-green-500 text-white font-bold py-2 px-6 rounded-lg">Checkout</button>
+          <div className='w-60'></div>
+          <a href='pickup'>  <button className="bg-green-500 text-white  ml-96 font-bold py-2 px-6 rounded-lg">Next</button></a>
         </div>
       </div>
     </div>

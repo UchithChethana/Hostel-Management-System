@@ -4,11 +4,11 @@ const Pickup = () => {
   return (
     <div className="min-h-screen bg-cover bg-center  bg-gradient-slide">
       <div className="flex items-center justify-center min-h-screen">
-        <div className="flex max-w-4xl mt-20 mb-20 w-full bg-sky-900 shadow-lg rounded-lg overflow-hidden">
+        <div className="flex max-w-4xl mt-20 mb-20 h-screen w-full bg-sky-900 shadow-lg rounded-lg overflow-hidden">
           {/* Right Side - Register Form */}
           <div className="w-1/2 p-8">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-white mb-4">Give us your pickup information</h1>
+              <h1 className="text-4xl font-bold text-white  mb-4">Give us your pickup information</h1>
             </div>
             <form className="space-y-6">
               {/* Username Field */}
@@ -20,7 +20,7 @@ const Pickup = () => {
                   type="text"
                   autoComplete="username"
                   required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                  className="appearance-none rounded-md   mt-12 relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
                   placeholder="Username"
                 />
               </div>
@@ -32,7 +32,7 @@ const Pickup = () => {
                   name="student-id"
                   type="text"
                   required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                  className="appearance-none rounded-md relative block w-full  mt-6 px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
                   placeholder="Student ID"
                 />
               </div>
@@ -46,7 +46,7 @@ const Pickup = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                  className="appearance-none rounded-md relative mt-6 block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
                   placeholder="Email address"
                 />
               </div>
@@ -103,48 +103,21 @@ const Pickup = () => {
                 />
               </div>
 
-              {/* Terms and Conditions */}
-              <div className="flex items-center">
-                <input
-                  id="terms"
-                  name="terms"
-                  type="checkbox"
-                  required
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                />
-                <label htmlFor="terms" className="ml-2 block text-sm text-white">
-                  Accept terms and conditions
-                </label>
-              </div>
+             
 
               {/* Register Button */}
               <div>
                 <button
                   type="submit"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  Register
+                  className="w-40 flex justify-center py-2 px-4 border border-transparent ml-60 text-sm font-medium rounded-md text-white bg-green-600 hover:bg-orange-500 focus:outline-none mt-14 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >Add to cart
                 </button>
               </div>
 
-              {/* Register with Google Button */}
-              <div>
-                <button
-                  type="button"
-                  className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
-                >
-                  <img src='' alt="Google" className="h-5 w-5 mr-2" />
-                  Register with Google
-                </button>
-              </div>
+              
             </form>
 
-            {/* Login Link */}
-            <div className="text-center text-sm text-black-600 mt-4">
-              <a href="/customerlogin" className="font-medium text-white hover:text-orange-500">
-                Already have an account? Login
-              </a>
-            </div>
+          
           </div>
 
           {/* Left Side - Image */}

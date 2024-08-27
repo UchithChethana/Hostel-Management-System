@@ -1,7 +1,7 @@
 
 import './App.css';
 
-import Layout from './Components/FoodLayout';
+import Layout from './Components/FoodOrdering/FoodLayout';
 
 import FoodHome from './Components/FoodOrdering/FoodHome';
 import{BrowserRouter as Router, Routes, Route} from "react-router-dom";
