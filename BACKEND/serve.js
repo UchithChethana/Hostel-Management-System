@@ -30,6 +30,10 @@ connection.once("open",() =>{   //open the connection
     console.log("MongoDb connection is sucess !");
 })
 
+
+const SupplyRouter = require("./routes/suppliers");
+
+app.use("/supply",SupplyRouter);
 //port eka run kara ganimata
 
 app.listen(PORT, () => {
