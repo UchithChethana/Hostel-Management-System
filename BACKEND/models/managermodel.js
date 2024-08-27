@@ -16,6 +16,7 @@ const adminchema=mongoose.Schema({
 })
 
 const Manager=mongoose.model("Admin",adminchema)
+<<<<<<< Updated upstream
 module.exports = Manager;
 
 /*const mongoose=require("mongoose");
@@ -39,3 +40,6 @@ const InventoryManagerSchema = new mongoose.Schema({
 //Create the model using the schema
 const Manager=mongoose.model("Admin",InventoryManagerSchema)
 module.exports = Manager;*/
+=======
+module.exports = Manager;
+>>>>>>> Stashed changes

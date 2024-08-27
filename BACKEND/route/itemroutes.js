@@ -72,6 +72,7 @@ router.get("/item_order/:id", async (req, res) => {
  
 module.exports = router;
 
+<<<<<<< Updated upstream
 /*const router = require("express").Router();
 const Products = require("../models/itemmodel");
 
@@ -116,3 +117,5 @@ router.route("/").get((req,res) =>{
 //Up
 module.exports = router;*/
 
+=======
+>>>>>>> Stashed changes

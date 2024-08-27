@@ -48,6 +48,7 @@ router.post("/signin",async (req, res) => {
       res.status(500).json({ success: false, message: error });
     }
   });
+<<<<<<< Updated upstream
   module.exports = router;
 
 /*const router = require("express").Router();
@@ -99,3 +100,6 @@ router.post("/signin",async (req, res) => {
     }
   });
   module.exports = router;*/
+=======
+  module.exports = router;
+>>>>>>> Stashed changes
