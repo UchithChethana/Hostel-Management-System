@@ -30,6 +30,10 @@ connection.once("open",() =>{   //open the connection
     console.log("MongoDb connection is sucess !");
 })
 
+const roomAllocationRouter = require("./route/room_allocationss");
+app.use("/room_allocation", roomAllocationRouter);
+
+
 //port eka run kara ganimata
 
 app.listen(PORT, () => {
