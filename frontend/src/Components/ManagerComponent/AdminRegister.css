@@ -1,0 +1,97 @@
+/* AdminRegister.css */
+
+#package-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6; /* Light gray background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* AdminRegister.css */
+
+.error {
+    color: rgb(200, 0, 0);
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.add-order {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+#package-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333; /* Dark gray text */
+    font-size: 24px;
+}
+
+#package-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-weight: 500;
+}
+
+#package-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9fafb; /* Very light gray background */
+}
+
+#package-form input[type="text"]:focus {
+    outline: none;
+    border-color: #3b82f6; /* Blue border on focus */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* Light blue shadow */
+}
+
+#package-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6; /* Blue button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#package-form button[type="submit"]:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+}
+
+#package-form button[type="submit"]:active {
+    background-color: #1d4ed8; /* Even darker blue on click */
+}
+
+#package-form p {
+    text-align: center;
+    color: #6b7280; /* Medium gray text */
+    margin-top: 20px;
+}
+
+#package-form p a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#package-form p a:hover {
+    text-decoration: underline;
+}
