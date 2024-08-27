@@ -8,6 +8,8 @@ function App() {
    <div>
     <Navbar/>
 
+    <h1>Staff management</h1>
+
    <Footer/>
 
     
