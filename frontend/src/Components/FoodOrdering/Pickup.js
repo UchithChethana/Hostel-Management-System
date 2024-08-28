@@ -4,13 +4,13 @@ const Pickup = () => {
   return (
     <div className="min-h-screen bg-cover bg-center  bg-gradient-slide">
       <div className="flex items-center justify-center min-h-screen">
-        <div className="flex max-w-4xl mt-20 mb-20 h-screen w-full bg-sky-900 shadow-lg rounded-lg overflow-hidden">
+        <div className="flex max-w-4xl mt-40 mb-20 h-screen w-full bg-sky-900 shadow-lg rounded-lg overflow-hidden">
           {/* Right Side - Register Form */}
           <div className="w-1/2 p-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold text-white  mb-4">Give us your pickup information</h1>
             </div>
-            <form className="space-y-6">
+            <form className="space-y-6 mt-20"  >
               {/* Username Field */}
               <div>
                 <label htmlFor="username" className="sr-only">Username</label>
@@ -20,7 +20,7 @@ const Pickup = () => {
                   type="text"
                   autoComplete="username"
                   required
-                  className="appearance-none rounded-md   mt-12 relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
+                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
                   placeholder="Username"
                 />
               </div>
@@ -50,34 +50,6 @@ const Pickup = () => {
                   placeholder="Email address"
                 />
               </div>
-
-              {/* Password Field */}
-              <div>
-                <label htmlFor="password" className="sr-only">Password</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
-                  placeholder="Password"
-                />
-              </div>
-
-              {/* Address Field */}
-              <div>
-                <label htmlFor="address" className="sr-only">Address</label>
-                <input
-                  id="address"
-                  name="address"
-                  type="text"
-                  className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-black text-black focus:outline-none focus:ring-blue-600 focus:border-blue-600 sm:text-sm"
-                  placeholder="Address"
-                />
-              </div>
-
-
               {/* Room Number Field */}
               <div>
                 <label htmlFor="room-number" className="sr-only">Room Number</label>
@@ -93,7 +65,7 @@ const Pickup = () => {
 
               {/* Pickup Time Field with Label */}
               <div>
-                <label htmlFor="pickup-time" className="block text-sm font-medium text-white mb-1">Pickup Time</label>
+                <label htmlFor="pickup-time" className="block text-sm  mr-64 font-medium text-black mb-1">Pickup Time</label>
                 <input
                   id="pickup-time"
                   name="pickup-time"
@@ -109,7 +81,7 @@ const Pickup = () => {
               <div>
                 <button
                   type="submit"
-                  className="w-40 flex justify-center py-2 px-4 border border-transparent ml-60 text-sm font-medium rounded-md text-white bg-green-600 hover:bg-orange-500 focus:outline-none mt-14 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="w-40 flex justify-center py-2 px-4 border border-transparent ml-40 text-sm font-medium rounded-md text-white bg-green-600 hover:bg-orange-500 focus:outline-none mt-14 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >Add to cart
                 </button>
               </div>

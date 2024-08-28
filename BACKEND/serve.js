@@ -5,6 +5,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express(); 
 require("dotenv").config(); 
+const Foodroutes = require('./route/Foodroutes.js')
 
 
 //all application runs are server
@@ -39,6 +40,8 @@ const managermodel = require("./models/managermodel.js")
 app.use("/itemmodel",itemmodelRouter)
 app.use("managermodel/",managermodel)
 //port eka run kara ganimata
+
+app.use("/api/food", Foodroutes)
 
 
 app.listen(PORT, () => {
