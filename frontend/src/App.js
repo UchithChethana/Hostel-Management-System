@@ -12,12 +12,22 @@ import LunchMenu from './Components/FoodOrdering/LunchMenu';
 import BeverageMenu from './Components/FoodOrdering/BeverageMenu';
 
 
+
+
+
+
 import ManagerSignin from './Components/ManagerComponent/ManagerSignin';
 import ManagerSignUp from './Components/ManagerComponent/ManagerSignUp';
 import Product from './Components/ItemComponent/product';
 import ItemDetails from './Components/ItemComponent/Itemdetails';
 import UpdateItem from './Components/ItemComponent/UpdateItem';
 import ItemRepoart from './Components/ItemComponent/ItemRepoart';
+import AdminProfile from './Components/FoodOrdering/AdminSide/AdminProfle';
+import FoodAdd from './Components/FoodOrdering/AdminSide/FoodAdd';
+import ProductList from './Components/FoodOrdering/AdminSide/ProductList';
+import AdminLayout from './Components/FoodOrdering/AdminSide/AdminLayout';
+
+import FoodAdminDashboard from './Components/FoodOrdering/AdminSide/FoodAdminDashboard';
 
 
 function App() {
@@ -43,6 +53,16 @@ function App() {
             <Route path="/lunchmenu" element={<LunchMenu/>}/>
             <Route path="/beveragemenu" element={<BeverageMenu/>}/>
           </Route>
+
+          <Route path='adminlayout' element={<AdminLayout />}>
+            <Route index element={<FoodAdminDashboard/>}/>
+            <Route path="adminprofile" element={<AdminProfile/>}/>
+            <Route path="foodadd" element={<FoodAdd/>}/>
+            <Route path="productlist" element={<ProductList/>}/>
+          </Route>
+
+
+
         </Routes>
 
         
