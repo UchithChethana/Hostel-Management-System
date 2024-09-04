@@ -1,0 +1,98 @@
+.footer-section {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo img {
+    padding-top: 70px;
+    width: 150px;
+  }
+  
+  .footer-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-search input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+  }
+  
+  .footer-search button {
+    padding: 8px 15px;
+    background-color: #f91;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-about, .footer-contact, .footer-resources {
+    width: 30%;
+  }
+  
+  .footer-about h4, .footer-contact h4, .footer-resources h4 {
+    margin-bottom: 10px;
+    color: #f91;
+  }
+  
+  .footer-resources ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-resources li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-resources a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-resources a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .footer-social a:hover {
+    color: #f91;
+  }
+  
