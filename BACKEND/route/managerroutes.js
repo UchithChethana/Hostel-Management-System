@@ -1,17 +1,37 @@
 const express=require("express")
 
 
+let Managermodel = require("../models/managermodel");
 const Manager = require("../models/managermodel");
 
 const router = express.Router();
 
-router.post("/add_manager",async(req,res)=>{
+/*router.post("/add_manager",async(req,res)=>{
     const data=new Manager(req.body)
     await data.save()
     res.send({success:true,message:"data created successfuly"})
-  })
+  })*/
+router.route("/add_manager").post((req,res)=>{
+  const username = req.body.username;
+  const email = req.body.email;
+  const password = req.body.password;
 
-  ////MANAGER Login 
+  const newAdmin = new Manager({
+    username,
+    email,
+    password
+  });
+
+  newAdmin.save().then(()=>{
+    res.json("Admin created");
+  }).catch((err)=>{
+        console.log(err);
+        res.status(500).json({ message: "Error adding manager", error: err });
+    });
+});
+
+
+  //MANAGER Login 
 router.post("/signin",async (req, res) => {
     console.log('in-------------------------------');
     const { email, password } = req.body;

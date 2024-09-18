@@ -1,28 +1,28 @@
+require("dotenv").config();
+
+
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express(); 
-require("dotenv").config(); 
+
 const Foodroutes = require('./route/Foodroutes.js')
-
-
-//all application runs are server
+const ItemRoutes = require("./route/itemroutes.js"); 
+const ManagerRoutes = require("./route/managerroutes.js"); 
 
 const PORT = process.env.PORT || 7050;
 
 app.use(cors());
-app.use(bodyParser.json());  
+app.use(bodyParser.json());
 
 const URL = process.env.MONGODB_URL;
 
-mongoose.connect(URL,{   //connect to the mongo
-    // useCreateIndex: true,
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // useFindAndModify: false
-}); 
+mongoose.connect(URL, {
+    // Use the necessary MongoDB connection options here
+});
+
  
 //connection  create
 
@@ -32,17 +32,18 @@ connection.once("open",() =>{   //open the connection
 })
 
 // const StaffRouter = require("./route/staffs.js")
-const itemmodelRouter = require("./models/itemmodel.js")
-const managermodel = require("./models/managermodel.js")
+//const itemmodelRouter = require("./models/itemmodel.js")
+//const managermodel = require("./models/managermodel.js")
 
 
 // app.use("/stafff",StaffRouter);
-app.use("/itemmodel",itemmodelRouter)
-app.use("managermodel/",managermodel)
+//app.use("/itemmodel",itemmodelRouter)
+//app.use("managermodel/",managermodel)
 //port eka run kara ganimata
 
-app.use("/api/food", Foodroutes)
-
+app.use("/api/food", Foodroutes);
+app.use("/product",ItemRoutes);
+app.use("/admin",ManagerRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is up and run on port Number :${PORT}`)

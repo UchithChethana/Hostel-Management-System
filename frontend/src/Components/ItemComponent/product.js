@@ -10,7 +10,7 @@ function Product() {
         price: "",
         dis: "",
         sku: "",
-        quentity: "",
+        quantity: "",
         photo: "",
         p_catogry: "",
         p_tags: "",

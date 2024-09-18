@@ -1,29 +1,6 @@
-const mongoose=require("mongoose")
-const itemchema=mongoose.Schema({
-    productname:String,
-    description:String,
-    price:String,
-    dis:String,
-    sku:String,
-    quentity:String,
-    photo:String,
-    p_catogry:String,
-    p_tags:String,
-   
-
-},{
-    timestamps:true
-
-})
-
-const itemmodel=mongoose.model("Products",itemchema)
-
-module.exports = itemmodel;
-
-/*const mongoose=require("mongoose");
-
-//define the schema
-const ItemSchema = new mongoose.Schema({
+const mongoose=require("mongoose");
+const { isNumber } = require("util");
+const itemSchema=mongoose.Schema({
     productname:{
         type:String,
         required: true,
@@ -33,18 +10,18 @@ const ItemSchema = new mongoose.Schema({
         required: true,
     },
     price:{
-        type:String,
+        type:Number,
         required: true,
     },
     dis:{
-        type:String,
+        type:Number,
     },
     sku:{
         type:String,
         required: true,
     },
-    quentity:{
-        type:String,
+    quantity:{
+        type:Number,
         required: true,
     },
     photo:{
@@ -59,9 +36,12 @@ const ItemSchema = new mongoose.Schema({
         type:String,
     }
 });
+({
+    timestamps:true
 
-//Create the model using the schema
-const itemmodel=mongoose.model("Products",itemchema)
-module.exports = itemmodel;*/
+})
+
+const itemmodel=mongoose.model("Product",itemSchema)
 
 module.exports = itemmodel;
+
