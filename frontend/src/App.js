@@ -28,6 +28,7 @@ import ProductList from './Components/FoodOrdering/AdminSide/ProductList';
 import AdminLayout from './Components/FoodOrdering/AdminSide/AdminLayout';
 
 import FoodAdminDashboard from './Components/FoodOrdering/AdminSide/FoodAdminDashboard';
+import EditProduct from './Components/FoodOrdering/AdminSide/EditProduct';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             <Route path="adminprofile" element={<AdminProfile/>}/>
             <Route path="foodadd" element={<FoodAdd/>}/>
             <Route path="productlist" element={<ProductList/>}/>
+            <Route path="editproduct/:productId" element={<EditProduct/>}/>
           </Route>
 
 
