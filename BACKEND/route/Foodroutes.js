@@ -15,6 +15,21 @@ router.get("/foodShow",async(req,res)=>{
     res.json({success:true,data:data})
 })
 
+// Get Single Food by ID
+router.get("/foodShow/:id", async (req, res) => {
+  try {
+      const { id } = req.params;
+      const foodItem = await Food.findById(id);
+      if (!foodItem) {
+          return res.status(404).json({ success: false, message: "Food item not found" });
+      }
+      res.json({ success: true, data: foodItem });
+  } catch (error) {
+      console.error('Error fetching food item:', error);
+      res.status(500).json({ success: false, message: "Server Error" });
+  }
+});
+
 // router.put("/foodUpdate/:id",async(req,res)=>{
 //     const {id,...rest}=req.body
 //     const data=await Food.updateOne({_id:id},rest)
