@@ -42,7 +42,7 @@ app.use("managermodel/",managermodel)
 //port eka run kara ganimata
 
 app.use("/api/food", Foodroutes)
-
+2
 
 app.listen(PORT, () => {
     console.log(`Server is up and run on port Number :${PORT}`)

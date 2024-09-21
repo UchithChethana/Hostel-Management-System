@@ -1,13 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faCamera } from '@fortawesome/free-solid-svg-icons';
 
 const FoodAdd = () => {
+  const [name, setProductName] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [category, setCategory] = useState('');
+  const [quantity, setQuantity] = useState('');
+
+  const handleAddProduct = async () => {
+    const foodData = {
+      name,
+      description,
+      price,
+      category,
+      quantity,
+    };
+
+    try {
+      const response = await fetch('http://localhost:7050/api/food/addFood', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(foodData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        alert('Product added successfully!');
+        // Clear input fields or handle success accordingly
+        setProductName('');
+        setDescription('');
+        setPrice('');
+        setCategory('');
+        setQuantity('');
+      } else {
+        alert('Failed to add product: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error adding product:', error);
+      alert('An error occurred while adding the product.');
+    }
+  };
 
   return (
     <div className="flex h-screen">
-      
-
       {/* Main content area */}
       <div className="flex-1 bg-gray-100">
         {/* Header */}
@@ -17,7 +56,6 @@ const FoodAdd = () => {
             <FontAwesomeIcon icon={faUserCircle} className="text-gray-600" />
             <div className="flex items-center gap-2">
               <span className="text-gray-700 font-medium">Binushi</span>
-              
             </div>
           </div>
         </header>
@@ -28,9 +66,19 @@ const FoodAdd = () => {
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Information</h2>
             <label className="text-gray-700 mb-2 block">Product name</label>
-            <input type="text" className="p-2 border rounded bg-gray-50 w-full mb-4" />
+            <input
+              type="text"
+              className="p-2 border rounded bg-gray-50 w-full mb-4"
+              value={name}
+              onChange={(e) => setProductName(e.target.value)}
+            />
             <label className="text-gray-700 mb-2 block">Description</label>
-            <input type="text" className="p-2 border rounded bg-gray-50 w-full mb-4" />
+            <input
+              type="text"
+              className="p-2 border rounded bg-gray-50 w-full mb-4"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
           </div>
 
           {/* Product Media Section */}
@@ -46,21 +94,36 @@ const FoodAdd = () => {
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Pricing</h2>
             <label className="text-gray-700 mb-2 block">Price</label>
-            <input type="text" className="p-2 border rounded bg-gray-50 w-full mb-4" />
+            <input
+              type="text"
+              className="p-2 border rounded bg-gray-50 w-full mb-4"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+            />
           </div>
 
           {/* Product Category Section */}
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Product Category</h2>
             <label className="text-gray-700 mb-2 block">Product Category</label>
-            <input type="text" className="p-2 border rounded bg-gray-50 w-full mb-4" />
+            <input
+              type="text"
+              className="p-2 border rounded bg-gray-50 w-full mb-4"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            />
           </div>
 
           {/* Inventory Section */}
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Inventory</h2>
             <label className="text-gray-700 mb-2 block">Quantity</label>
-            <input type="text" className="p-2 border rounded bg-gray-50 w-full mb-4" />
+            <input
+              type="text"
+              className="p-2 border rounded bg-gray-50 w-full mb-4"
+              value={quantity}
+              onChange={(e) => setQuantity(e.target.value)}
+            />
           </div>
 
           {/* Action Buttons */}
@@ -68,7 +131,10 @@ const FoodAdd = () => {
             <button className="bg-red-300 text-black border h-14 border-red-800 px-6 py-2 rounded hover:bg-red-400">
               Discard Change
             </button>
-            <button className="bg-blue-600 text-white h-14 px-6 py-2 rounded hover:bg-blue-700">
+            <button
+              onClick={handleAddProduct}
+              className="bg-blue-600 text-white h-14 px-6 py-2 rounded hover:bg-blue-700"
+            >
               Add product
             </button>
           </div>
