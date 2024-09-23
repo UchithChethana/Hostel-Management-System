@@ -30,6 +30,18 @@ router.get("/foodShow/:id", async (req, res) => {
   }
 });
 
+// Fetch products by category
+router.get("/foodCategory/:category", async (req, res) => {
+  try {
+      const { category } = req.params;
+      const foods = await Food.find({ category: category });
+      res.json({ success: true, data: foods });
+  } catch (error) {
+      console.error(error);
+      res.status(500).json({ success: false, message: "An error occurred while fetching foods by category" });
+  }
+});
+
 // router.put("/foodUpdate/:id",async(req,res)=>{
 //     const {id,...rest}=req.body
 //     const data=await Food.updateOne({_id:id},rest)
