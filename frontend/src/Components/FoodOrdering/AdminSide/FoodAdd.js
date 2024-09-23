@@ -30,7 +30,7 @@ const FoodAdd = () => {
       const result = await response.json();
       if (result.success) {
         alert('Product added successfully!');
-        // Clear input fields or handle success accordingly
+        // Clear input fields or handle success
         setProductName('');
         setDescription('');
         setPrice('');
