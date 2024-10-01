@@ -5,7 +5,6 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express(); 
 require("dotenv").config(); 
-const Foodroutes = require('./route/Foodroutes.js')
 
 
 //all application runs are server
@@ -31,6 +30,9 @@ connection.once("open",() =>{   //open the connection
     console.log("MongoDb connection is sucess !");
 })
 
+//port eka run kara ganimata
+
+
 // const StaffRouter = require("./route/staffs.js")
 const itemmodelRouter = require("./models/itemmodel.js")
 const managermodel = require("./models/managermodel.js")
@@ -41,12 +43,15 @@ app.use("/itemmodel",itemmodelRouter)
 app.use("managermodel/",managermodel)
 //port eka run kara ganimata
 
-app.use("/api/food", Foodroutes)
+
 
 
 app.listen(PORT, () => {
     console.log(`Server is up and run on port Number :${PORT}`)
 })
+
+
+
 
 
 
