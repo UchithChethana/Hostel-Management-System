@@ -71,13 +71,21 @@ const FoodAdd = () => {
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={name}
               onChange={(e) => setProductName(e.target.value)}
+              pattern="[A-Za-z\s]+"
+              title="Product name should only contain letters and spaces"
+              onKeyPress={(e) => {
+                if (!/[A-Za-z\s]/.test(e.key)) {
+                  e.preventDefault();
+                }
+              }}
+              required
             />
             <label className="text-gray-700 mb-2 block">Description</label>
-            <input
-              type="text"
+            <textarea
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
+              required
             />
           </div>
 
@@ -99,6 +107,14 @@ const FoodAdd = () => {
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              pattern="^\d+(\.\d{1,2})?$"
+              title="Price should be a number with up to 2 decimal places"
+              onKeyPress={(e) => {
+                if (!/[\d.]/.test(e.key)) {
+                  e.preventDefault();
+                }
+              }}
+              required
             />
           </div>
 
@@ -106,12 +122,18 @@ const FoodAdd = () => {
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Product Category</h2>
             <label className="text-gray-700 mb-2 block">Product Category</label>
-            <input
-              type="text"
+            <select
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-            />
+              required
+            >
+              <option value="">Select a category</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Beverages">Beverages</option>
+            </select>
           </div>
 
           {/* Inventory Section */}
@@ -123,6 +145,14 @@ const FoodAdd = () => {
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={quantity}
               onChange={(e) => setQuantity(e.target.value)}
+              pattern="^\d+$"
+              title="Quantity should be a whole number"
+              onKeyPress={(e) => {
+                if (!/\d/.test(e.key)) {
+                  e.preventDefault();
+                }
+              }}
+              required
             />
           </div>
 

@@ -131,12 +131,17 @@ const EditProduct = () => {
           <div className="bg-gray-200 p-6 rounded-lg shadow-inner">
             <h2 className="text-lg font-semibold text-gray-700 mb-4">Product Category</h2>
             <label className="text-gray-700 mb-2 block">Category</label>
-            <input
-              type="text"
+            <select
               className="p-2 border rounded bg-gray-50 w-full mb-4"
               value={product.category}
               onChange={(e) => setProduct({ ...product, category: e.target.value })}
-            />
+            >
+              <option value="">Select a category</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Beverages">Beverages</option>
+            </select>
           </div>
 
           {/* Inventory Section */}
