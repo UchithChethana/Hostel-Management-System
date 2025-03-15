@@ -6,11 +6,11 @@ import FoodHome from './Components/FoodOrdering/FoodHome';
 import{BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import BreakfirstMenu from './Components/FoodOrdering/BreakfirstMenu';
 import DinnerMenu from './Components/FoodOrdering/DinnerMenu';
-import Pickup from './Components/FoodOrdering/Pickup';
+import Pickup from './Components/FoodOrdering/Pickup'; // Changed 'Pickup' to 'pickup'
 import SelectedFoods from './Components/FoodOrdering/SelectedFoods';
 import LunchMenu from './Components/FoodOrdering/LunchMenu';
 import BeverageMenu from './Components/FoodOrdering/BeverageMenu';
-
+import LoginPage from './Components/FoodOrdering/LoginPage';
 
 
 
@@ -53,6 +53,7 @@ function App() {
             <Route path="/selectedfoods" element={<SelectedFoods/>}/>
             <Route path="/lunchmenu" element={<LunchMenu/>}/>
             <Route path="/beveragemenu" element={<BeverageMenu/>}/>
+            <Route path="/foodadminlogin" element={<LoginPage/>}/>
           </Route>
 
           <Route path='adminlayout' element={<AdminLayout />}>

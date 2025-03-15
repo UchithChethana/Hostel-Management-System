@@ -5,7 +5,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express(); 
 require("dotenv").config(); 
-
+const Foodroutes = require('./routes/Foodroutes.js')
+const pickupRoutes = require('./routes/PickupRoutes.js');
 
 //all application runs are server
 
@@ -43,8 +44,14 @@ app.use("/itemmodel",itemmodelRouter)
 app.use("managermodel/",managermodel)
 //port eka run kara ganimata
 
+app.use("/api/food", Foodroutes)
+app.use('/api/pickup', pickupRoutes);
 
-
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
+});
 
 app.listen(PORT, () => {
     console.log(`Server is up and run on port Number :${PORT}`)

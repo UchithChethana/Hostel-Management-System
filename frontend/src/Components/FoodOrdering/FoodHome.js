@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FoodHome = () => {
   return (
@@ -33,6 +34,15 @@ const FoodHome = () => {
           <a href="dinnermenu"><button className="bg-gray-200  bg-no-repeat bg-cover flex items-center justify-center py-20 w-96 border border-black rounded-md shadow-md hover:shadow-lg"style={{ backgroundImage: "url('https://i.pinimg.com/564x/38/b7/79/38b7798fac310200270b0313a125aa71.jpg')" }}>
             <span className="text-2xl font-extrabold">DINNER</span>
           </button></a>
+        </div>
+        
+        {/* Login Button */}
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2">
+          <Link to="/foodadminlogin">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+              Food Admin Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>
