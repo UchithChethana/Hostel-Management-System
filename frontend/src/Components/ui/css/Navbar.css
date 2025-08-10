@@ -9,7 +9,7 @@
     align-items: center;
     position: fixed; 
     top: 0;
-    width: 97%;
+    width: 100%;
     z-index: 1000;
     font-family: "Alegreya Sans SC", sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

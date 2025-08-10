@@ -12,16 +12,12 @@ import LunchMenu from './Components/FoodOrdering/LunchMenu';
 import BeverageMenu from './Components/FoodOrdering/BeverageMenu';
 
 
-
-
-
-
-import ManagerSignin from './Components/ManagerComponent/ManagerSignin';
-import ManagerSignUp from './Components/ManagerComponent/ManagerSignUp';
-import Product from './Components/ItemComponent/product';
+import ManagerSignin from './Components/ItemComponent/AdminSide/ManagerSignin';
+import ManagerSignUp from './Components/ItemComponent/AdminSide/ManagerSignUp';
+/*import Product from './Components/ItemComponent/product';
 import ItemDetails from './Components/ItemComponent/Itemdetails';
 import UpdateItem from './Components/ItemComponent/UpdateItem';
-import ItemRepoart from './Components/ItemComponent/ItemRepoart';
+import ItemRepoart from './Components/ItemComponent/ItemRepoart';*/
 import AdminProfile from './Components/FoodOrdering/AdminSide/AdminProfle';
 import FoodAdd from './Components/FoodOrdering/AdminSide/FoodAdd';
 import ProductList from './Components/FoodOrdering/AdminSide/ProductList';
@@ -29,6 +25,12 @@ import AdminLayout from './Components/FoodOrdering/AdminSide/AdminLayout';
 
 import FoodAdminDashboard from './Components/FoodOrdering/AdminSide/FoodAdminDashboard';
 
+/*
+      <Route path="/add-item" element={<Product />} />
+      <Route path="/itemdetails" element={<ItemDetails />} />
+      <Route path="/itemupdate/:id" element={<UpdateItem />} />
+      <Route path="/itemrepoart" element={<ItemRepoart />} />
+*/
 
 function App() {
   return (
@@ -36,12 +38,8 @@ function App() {
       <Router>
         {/* <Header /> */}
         <Routes>
-          <Route path="/" element={<ManagerSignin />} />
+          <Route path="/managersignup" element={<ManagerSignin />} />
           <Route path="/add-manager" element={<ManagerSignUp />} />
-          <Route path="/add-item" element={<Product />} />
-          <Route path="/itemdetails" element={<ItemDetails />} />
-          <Route path="/itemupdate/:id" element={<UpdateItem />} />
-          <Route path="/itemrepoart" element={<ItemRepoart />} />
 
 
           <Route path="/" element={<Layout/>}>

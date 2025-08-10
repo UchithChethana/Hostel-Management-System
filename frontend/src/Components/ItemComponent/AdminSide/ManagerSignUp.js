@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import './AdminRegister.css'
 import { useNavigate } from "react-router-dom";
 
 function ManagerSignUp() {
-    const [order, setOrder] = useState({
+    let [order, setOrder] = useState({
         username: "",
         email: "",
         password: "",
